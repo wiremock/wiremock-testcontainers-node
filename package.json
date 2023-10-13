@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "testcontainers": "^10.2.1"
+  }
+}
