@@ -1,12 +1,17 @@
 import { GenericContainer } from "testcontainers";
-const container = await new GenericContainer("wiremock/wiremock")
+import { WireMockContainer } from "./util/WireMockContainer.js";
+// const container = await new GenericContainer("wiremock/wiremock")
+//   .withExposedPorts(8080)
+//   .withCopyFilesToContainer([
+//     {
+//       source: "./mappings/hello_world.json",
+//       target: "/home/wiremock/mappings/hello_world.json",
+//     },
+//   ])
+//   .start();
+const container = await new WireMockContainer()
+  .withMapping("./mappings/hello_world.json")
   .withExposedPorts(8080)
-  .withCopyFilesToContainer([
-    {
-      source: "./mappings/hello_world.json",
-      target: "/home/wiremock/mappings/hello_world.json",
-    },
-  ])
   .start();
 
 // const { output, exitCode } = await container.exec(["pwd"]);
