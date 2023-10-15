@@ -1,7 +1,7 @@
 {
   "name": "wiremock-testcontainers-node",
   "version": "0.0.1",
-  "description": "Run wiremock tests using testcontainers in node.js",
+  "description": "Run WireMock with JavaScript/TypeScript tests using Testcontainers for Node.js",
   "main": "index.js",
   "type": "module",
   "dependencies": {
@@ -12,5 +12,5 @@
     "test": "node demo.js"
   },
   "author": "Aditya Ghidora",
-  "license": "MIT"
+  "license": "Apache License v2"
 }
