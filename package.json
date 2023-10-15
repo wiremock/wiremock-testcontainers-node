@@ -1,6 +1,16 @@
 {
+  "name": "wiremock-testcontainers-node",
+  "version": "0.0.1",
+  "description": "Run wiremock tests using testcontainers in node.js",
+  "main": "index.js",
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
     "testcontainers": "^10.2.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node demo.js"
+  },
+  "author": "Aditya Ghidora",
+  "license": "MIT"
 }

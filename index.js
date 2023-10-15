@@ -1,5 +1,5 @@
 import { GenericContainer, AbstractStartedContainer } from "testcontainers";
-class WireMockContainer extends GenericContainer {
+export class WireMockContainer extends GenericContainer {
   constructor() {
     super("wiremock/wiremock");
   }
@@ -16,11 +16,10 @@ class WireMockContainer extends GenericContainer {
     return new StartedWireMockContainer(await super.start());
   }
 }
-class StartedWireMockContainer extends AbstractStartedContainer {
+export class StartedWireMockContainer extends AbstractStartedContainer {
   constructor(startedTestContainer) {
     super(startedTestContainer);
   }
-
   withMapping(mapping) {
     super.withCopyFilesToContainer([
       {
@@ -31,5 +30,3 @@ class StartedWireMockContainer extends AbstractStartedContainer {
     return this;
   }
 }
-
-export { WireMockContainer, StartedWireMockContainer };

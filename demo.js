@@ -1,4 +1,4 @@
-import { GenericContainer } from "testcontainers";
+// import { GenericContainer } from "testcontainers";
 import { WireMockContainer } from "./util/WireMockContainer.js";
 // const container = await new GenericContainer("wiremock/wiremock")
 //   .withExposedPorts(8080)
