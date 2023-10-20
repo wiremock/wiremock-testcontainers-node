@@ -7,7 +7,6 @@
   "dependencies": {
     "testcontainers": "^10.2.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node demo.js"
   },
