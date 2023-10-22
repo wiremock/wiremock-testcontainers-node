@@ -2,23 +2,19 @@
   "name": "wiremock-testcontainers-node",
   "version": "0.0.1",
   "description": "Run WireMock with JavaScript/TypeScript tests using Testcontainers for Node.js",
-  "main": "index.js",
   "type": "module",
   "dependencies": {
     "testcontainers": "^10.2.1"
   },
-  "files": [
-    "dist"
-  ],
+  "source": "src/index.js",
+  "main": "dist/index.mjs",
   "scripts": {
-    "build": "rm -rf dist && node esbuild.cjs && tsc",
+    "build": "parcel build",
     "test": "node demo.js"
   },
   "author": "Aditya Ghidora",
   "license": "Apache License v2",
   "devDependencies": {
-    "esbuild": "^0.19.5",
-    "esbuild-node-externals": "^1.9.0",
-    "typescript": "^5.2.2"
+    "parcel": "^2.10.0"
   }
 }
