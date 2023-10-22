@@ -1,9 +1,9 @@
-import { GenericContainer, AbstractStartedContainer } from "testcontainers";
+import { GenericContainer, StartedTestContainer, AbstractStartedContainer } from "testcontainers";
 export class WireMockContainer extends GenericContainer {
   constructor() {
     super("wiremock/wiremock");
   }
-  withMapping(mapping) {
+  public withMapping(mapping: string): this {
     super.withCopyFilesToContainer([
       {
         source: mapping,
@@ -12,16 +12,16 @@ export class WireMockContainer extends GenericContainer {
     ]);
     return this;
   }
-  async start() {
+  public override async start(): Promise<StartedWireMockContainer> {
     return new StartedWireMockContainer(await super.start());
   }
 }
 export class StartedWireMockContainer extends AbstractStartedContainer {
-  constructor(startedTestContainer) {
+  constructor(startedTestContainer: StartedTestContainer) {
     super(startedTestContainer);
   }
-  withMapping(mapping) {
-    super.withCopyFilesToContainer([
+  public withMapping(mapping: string): this {
+    super.copyFilesToContainer([
       {
         source: mapping,
         target: "/home/wiremock/mappings/hello_world.json",

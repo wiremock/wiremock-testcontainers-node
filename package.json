@@ -7,9 +7,18 @@
   "dependencies": {
     "testcontainers": "^10.2.1"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "rm -rf dist && node esbuild.cjs && tsc",
     "test": "node demo.js"
   },
   "author": "Aditya Ghidora",
-  "license": "Apache License v2"
+  "license": "Apache License v2",
+  "devDependencies": {
+    "esbuild": "^0.19.5",
+    "esbuild-node-externals": "^1.9.0",
+    "typescript": "^5.2.2"
+  }
 }
