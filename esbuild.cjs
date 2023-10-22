@@ -1,4 +1,4 @@
-const {build} = require("esbuild");
+const { build } = require("esbuild");
 const { nodeExternalsPlugin } = require("esbuild-node-externals");
 build({
   entryPoints: ["./src/index.js"],
@@ -9,5 +9,5 @@ build({
   platform: "node",
   format: "cjs",
   target: "esnext",
-  plugins: [ nodeExternalsPlugin()]
+  plugins: [nodeExternalsPlugin()],
 }).catch(() => process.exit(1));
