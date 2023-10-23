@@ -2,14 +2,28 @@
   "name": "wiremock-testcontainers-node",
   "version": "0.0.1",
   "description": "Run WireMock with JavaScript/TypeScript tests using Testcontainers for Node.js",
-  "main": "index.js",
   "type": "module",
   "dependencies": {
     "testcontainers": "^10.2.1"
   },
+  "source": "src/index.js",
+  "main": "dist/index.mjs",
   "scripts": {
-    "test": "node demo.js"
+    "build": "parcel build",
+    "test": "vitest run",
+    "format": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "author": "Aditya Ghidora",
-  "license": "Apache License v2"
+  "license": "Apache License v2",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "parcel": "^2.10.0",
+    "prettier": "^3.0.3",
+    "vitest": "^0.34.6"
+  }
 }

@@ -21,7 +21,7 @@ export class StartedWireMockContainer extends AbstractStartedContainer {
     super(startedTestContainer);
   }
   withMapping(mapping) {
-    super.withCopyFilesToContainer([
+    super.copyFilesToContainer([
       {
         source: mapping,
         target: "/home/wiremock/mappings/hello_world.json",
