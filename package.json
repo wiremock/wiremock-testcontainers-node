@@ -1,5 +1,5 @@
 {
-  "name": "wiremock-testcontainers-node",
+  "name": "@wiremock/wiremock-testcontainers-node",
   "version": "0.0.1",
   "description": "Run WireMock with JavaScript/TypeScript tests using Testcontainers for Node.js",
   "type": "module",
