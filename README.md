@@ -1,5 +1,7 @@
 # wiremock-testcontainers-node
 
+![example workflow](https://github.com/wiremock/wiremock-testcontainers-node/actions/workflows/ci.yml/badge.svg)
+
 WireMock module for [Testcontainers for NodeJS](https://node.testcontainers.org/)
 
 ## Usage
