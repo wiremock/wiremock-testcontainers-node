@@ -7,7 +7,7 @@ WireMock module for [Testcontainers for NodeJS](https://node.testcontainers.org/
 ## Usage
 
 ```bash
-npm install wiremock-testcontainers-node
+npm install @wiremock/wiremock-testcontainers-node --save-dev
 ```
 
 Add a stub mapping json file (eg. `mapping.json`)
